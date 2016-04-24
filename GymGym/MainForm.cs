@@ -84,24 +84,7 @@ namespace GymGym
         {
         }
 
-        private void lbClient_Click(object sender, EventArgs e)
-        {
-            //if (_clientSelected != lbClient.SelectedItem as Client && _clientSelected!=null)
-            //{
-            //    lbClient.SelectedItems.Remove(_clientSelected);
-            //    _clientSelected = lbClient.SelectedItem as Client;
-            //}
-            //Client temp = lbClient.SelectedItem as Client;
-            //if (temp != null)
-            //{
-            //    lbTrainer.SelectedItems.Clear();
-            //    foreach (var trainer in temp.Trainers)
-            //    {
-            //        lbTrainer.SelectedItems.Add(trainer);
-            //    }
-            //}
-
-        }
+       
 
         private void lbTrainer_Click(object sender, EventArgs e)
         {
@@ -124,6 +107,11 @@ namespace GymGym
             }
             _clientTrainer = new ClientTrainingsForm { Owner = this };
             _clientTrainer.Show();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

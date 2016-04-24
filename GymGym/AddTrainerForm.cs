@@ -34,5 +34,10 @@ namespace GymGym
             categoryBox.DataSource = Enum.GetValues(typeof(TrainingType));
         }
 
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

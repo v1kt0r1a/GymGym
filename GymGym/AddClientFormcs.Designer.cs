@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.cancelButoon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.yearTermBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monthTermBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dayTermBox)).BeginInit();
@@ -58,10 +59,11 @@
             // 
             // programmTrainingBox
             // 
+            this.programmTrainingBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.programmTrainingBox.FormattingEnabled = true;
             this.programmTrainingBox.Location = new System.Drawing.Point(178, 264);
             this.programmTrainingBox.Name = "programmTrainingBox";
-            this.programmTrainingBox.Size = new System.Drawing.Size(121, 21);
+            this.programmTrainingBox.Size = new System.Drawing.Size(165, 21);
             this.programmTrainingBox.TabIndex = 60;
             // 
             // yearTermBox
@@ -132,6 +134,7 @@
             // 
             // typeAbonBox
             // 
+            this.typeAbonBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.typeAbonBox.FormattingEnabled = true;
             this.typeAbonBox.Items.AddRange(new object[] {
             "Дневной ",
@@ -139,7 +142,7 @@
             "Безлимит"});
             this.typeAbonBox.Location = new System.Drawing.Point(137, 201);
             this.typeAbonBox.Name = "typeAbonBox";
-            this.typeAbonBox.Size = new System.Drawing.Size(121, 21);
+            this.typeAbonBox.Size = new System.Drawing.Size(206, 21);
             this.typeAbonBox.TabIndex = 56;
             // 
             // label8
@@ -183,7 +186,7 @@
             // 
             this.numberClientBox.Location = new System.Drawing.Point(164, 168);
             this.numberClientBox.Name = "numberClientBox";
-            this.numberClientBox.Size = new System.Drawing.Size(127, 20);
+            this.numberClientBox.Size = new System.Drawing.Size(179, 20);
             this.numberClientBox.TabIndex = 51;
             // 
             // yearClient
@@ -304,20 +307,31 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(56, 300);
+            this.btnAdd.Location = new System.Drawing.Point(44, 314);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 61;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // cancelButoon
+            // 
+            this.cancelButoon.Location = new System.Drawing.Point(256, 314);
+            this.cancelButoon.Name = "cancelButoon";
+            this.cancelButoon.Size = new System.Drawing.Size(75, 23);
+            this.cancelButoon.TabIndex = 62;
+            this.cancelButoon.Text = "Отмена";
+            this.cancelButoon.UseVisualStyleBackColor = true;
+            this.cancelButoon.Click += new System.EventHandler(this.cancelButoon_Click);
             // 
             // AddClientFormcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(391, 347);
+            this.ClientSize = new System.Drawing.Size(390, 357);
+            this.Controls.Add(this.cancelButoon);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.programmTrainingBox);
             this.Controls.Add(this.yearTermBox);
@@ -374,5 +388,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button cancelButoon;
     }
 }

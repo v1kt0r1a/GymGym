@@ -58,6 +58,7 @@
             this.CancelButton.TabIndex = 33;
             this.CancelButton.Text = "Отмена";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // addTrainerButton
             // 
@@ -98,7 +99,7 @@
             // 
             this.numberTrainerBox.Location = new System.Drawing.Point(193, 200);
             this.numberTrainerBox.Name = "numberTrainerBox";
-            this.numberTrainerBox.Size = new System.Drawing.Size(127, 20);
+            this.numberTrainerBox.Size = new System.Drawing.Size(179, 20);
             this.numberTrainerBox.TabIndex = 28;
             // 
             // yearTrainer
@@ -240,7 +241,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(442, 399);
+            this.ClientSize = new System.Drawing.Size(453, 371);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.addTrainerButton);
             this.Controls.Add(this.label7);

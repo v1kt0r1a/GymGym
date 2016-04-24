@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.addProgrammButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.aboutButton = new System.Windows.Forms.Button();
@@ -39,15 +38,6 @@
             this.lbClient = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // addProgrammButton
-            // 
-            this.addProgrammButton.Location = new System.Drawing.Point(394, 445);
-            this.addProgrammButton.Name = "addProgrammButton";
-            this.addProgrammButton.Size = new System.Drawing.Size(149, 38);
-            this.addProgrammButton.TabIndex = 27;
-            this.addProgrammButton.Text = "Добавить программу тренировок";
-            this.addProgrammButton.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -86,6 +76,7 @@
             this.exitButton.TabIndex = 23;
             this.exitButton.Text = "Выход";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // addClientButton
             // 
@@ -124,7 +115,7 @@
             this.lbClient.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lbClient.Size = new System.Drawing.Size(666, 147);
             this.lbClient.TabIndex = 31;
-            this.lbClient.Click += new System.EventHandler(this.lbClient_Click);
+         
             // 
             // button1
             // 
@@ -132,7 +123,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 38);
             this.button1.TabIndex = 32;
-            this.button1.Text = "Добавить  тренировку";
+            this.button1.Text = "Добавить программу тренировок";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -145,7 +136,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbClient);
             this.Controls.Add(this.lbTrainer);
-            this.Controls.Add(this.addProgrammButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.aboutButton);
@@ -162,7 +152,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button addProgrammButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button aboutButton;

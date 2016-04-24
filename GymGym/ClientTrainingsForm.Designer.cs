@@ -31,15 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbClients = new System.Windows.Forms.ListBox();
             this.cbTrainers = new System.Windows.Forms.ComboBox();
-            this.trainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAddTraining = new System.Windows.Forms.Button();
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.trainerBindingSource)).BeginInit();
+            this.cbTrainings = new System.Windows.Forms.ComboBox();
+            this.cancelBtn = new System.Windows.Forms.Button();
+            this.trainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,15 +60,6 @@
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Тренер";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 251);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Дата проведения";
             // 
             // label4
             // 
@@ -89,20 +81,18 @@
             // cbTrainers
             // 
             this.cbTrainers.AllowDrop = true;
+            this.cbTrainers.BackColor = System.Drawing.Color.White;
+            this.cbTrainers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTrainers.Location = new System.Drawing.Point(117, 209);
             this.cbTrainers.Name = "cbTrainers";
             this.cbTrainers.Size = new System.Drawing.Size(198, 21);
             this.cbTrainers.TabIndex = 5;
             // 
-            // trainerBindingSource
-            // 
-            this.trainerBindingSource.DataSource = typeof(GymDate.Trainer);
-            // 
             // btnAddTraining
             // 
-            this.btnAddTraining.Location = new System.Drawing.Point(15, 272);
+            this.btnAddTraining.Location = new System.Drawing.Point(15, 287);
             this.btnAddTraining.Name = "btnAddTraining";
-            this.btnAddTraining.Size = new System.Drawing.Size(300, 23);
+            this.btnAddTraining.Size = new System.Drawing.Size(154, 23);
             this.btnAddTraining.TabIndex = 6;
             this.btnAddTraining.Text = "Добавить тренировку";
             this.btnAddTraining.UseVisualStyleBackColor = true;
@@ -113,23 +103,49 @@
             this.clientsBindingSource.DataMember = "Clients";
             this.clientsBindingSource.DataSource = this.trainerBindingSource;
             // 
+            // cbTrainings
+            // 
+            this.cbTrainings.AllowDrop = true;
+            this.cbTrainings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTrainings.FormattingEnabled = true;
+            this.cbTrainings.Location = new System.Drawing.Point(117, 171);
+            this.cbTrainings.Name = "cbTrainings";
+            this.cbTrainings.Size = new System.Drawing.Size(198, 21);
+            this.cbTrainings.TabIndex = 7;
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Location = new System.Drawing.Point(209, 287);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.cancelBtn.TabIndex = 8;
+            this.cancelBtn.Text = "Отмена";
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
+            // trainerBindingSource
+            // 
+            this.trainerBindingSource.DataSource = typeof(GymDate.Trainer);
+            // 
             // ClientTrainingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 307);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(324, 322);
+            this.Controls.Add(this.cancelBtn);
+            this.Controls.Add(this.cbTrainings);
             this.Controls.Add(this.btnAddTraining);
             this.Controls.Add(this.cbTrainers);
             this.Controls.Add(this.lbClients);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ClientTrainingsForm";
             this.Text = "ClientTrainingsForm";
             this.Load += new System.EventHandler(this.ClientTrainingsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.trainerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,12 +155,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox lbClients;
         private System.Windows.Forms.ComboBox cbTrainers;
         private System.Windows.Forms.BindingSource trainerBindingSource;
         private System.Windows.Forms.Button btnAddTraining;
         private System.Windows.Forms.BindingSource clientsBindingSource;
+        private System.Windows.Forms.ComboBox cbTrainings;
+        private System.Windows.Forms.Button cancelBtn;
     }
 }

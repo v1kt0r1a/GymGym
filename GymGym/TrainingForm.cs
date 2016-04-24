@@ -16,5 +16,10 @@ namespace GymGym
         {
             InitializeComponent();
         }
+
+        private void listBoxTrainings_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

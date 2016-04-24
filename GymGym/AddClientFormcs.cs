@@ -35,6 +35,11 @@ namespace GymGym
             Close();
         }
 
+        private void cancelButoon_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
+
 
     }
 }
